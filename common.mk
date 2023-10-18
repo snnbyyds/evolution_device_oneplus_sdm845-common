@@ -280,6 +280,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Keymaster
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.keymaster-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.keymaster-V3-ndk.so \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.keymaster-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster-V3-ndk.so
+
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
@@ -369,6 +373,11 @@ PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor
+
+# Rebootescrow
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.rebootescrow-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.rebootescrow-V1-ndk.so \
+    prebuilts/vndk/v33/arm64/arch-arm-armv8-a/shared/vndk-core/android.hardware.rebootescrow-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.rebootescrow-V1-ndk.so
 
 # RIL
 PRODUCT_PACKAGES += \
